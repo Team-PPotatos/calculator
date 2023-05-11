@@ -11,7 +11,11 @@ public class Calculator {
     }
 
     public void multiple(int b) {
-        this.a = this.a * b;
+        if (b == 0){
+            throw new IllegalArgumentException("0으로 곱하면 무조건 0이 나옵니다. 다른 값을 입력해주세요.");
+        } else {
+            this.a = this.a * b;
+        }
     }
 
     public int getMultiple() {
